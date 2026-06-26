@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Representative Dashboard · Samsung Accent AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <!-- ============ TOP NAV ============ -->
+  <header class="topnav">
+    <a class="brand" href="index.html">
+      <div>
+        <div class="logo">SAMSUNG</div>
+        <div class="product">Accent AI Analytics</div>
+      </div>
+    </a>
+    <div class="nav-title">
+      <b>Sales Representative Dashboard</b>
+      <small>Performance · Coaching · Conversation Intelligence</small>
+    </div>
+    <div class="nav-spacer"></div>
+    <div class="nav-controls">
+      <div class="selector"><span class="muted">📅</span> Today, 26 Jun 2026 <span class="chev">▾</span></div>
+      <div class="selector"><span class="muted">🏬</span> Dubai Mall Flagship <span class="chev">▾</span></div>
+      <div class="icon-btn" title="Notifications">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        <span class="dot"></span>
+      </div>
+      <div class="avatar">
+        <div class="pic">SF</div>
+        <div class="who"><b>Saif F.</b><small>Senior Rep</small></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ APP GRID ============ -->
+  <div class="app with-right">
+
+    <!-- ---------- LEFT SIDEBAR ---------- -->
+    <aside class="sidebar">
+
+      <!-- Card 1: Promoter Score gauge -->
+      <section class="card">
+        <div class="card-head"><h3>Promoter Score</h3><span class="more">⋯</span></div>
+        <div class="gauge" style="position:relative">
+          <svg width="170" height="170" viewBox="0 0 170 170">
+            <circle class="ring-track" cx="85" cy="85" r="66" stroke-width="13"/>
+            <circle class="ring-fill" cx="85" cy="85" r="66" stroke-width="13"
+              stroke="#1428A0" stroke-dasharray="414.7" stroke-dashoffset="120.3"/>
+          </svg>
+          <div style="position:absolute;inset:0 0 18px 0;display:grid;place-items:center">
+            <div>
+              <div class="g-value">14.2</div>
+              <div class="g-unit">Promoter Index</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex between aic" style="margin-top:4px">
+          <span class="muted" style="font-size:12px">Daily Strain Score</span>
+          <span class="pill up">▲ 6%</span>
+        </div>
+      </section>
+
+      <!-- Card 2: 2x2 score grid -->
+      <section class="card">
+        <div class="card-head"><h3>Sales Methodology Scores</h3><span class="sub">vs target</span></div>
+        <div class="score-grid">
+          <!-- Introduction 90 green -->
+          <div class="mini-score">
+            <div class="ring"><svg width="54" height="54" viewBox="0 0 54 54">
+              <circle cx="27" cy="27" r="22" stroke="#eef1f8" stroke-width="6" fill="none"/>
+              <circle cx="27" cy="27" r="22" stroke="#16a34a" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="138.2" stroke-dashoffset="13.8"/>
+            </svg><b>90%</b></div>
+            <div class="ms-label">Introduction</div>
+          </div>
+          <!-- Discovery 77 amber -->
+          <div class="mini-score">
+            <div class="ring"><svg width="54" height="54" viewBox="0 0 54 54">
+              <circle cx="27" cy="27" r="22" stroke="#eef1f8" stroke-width="6" fill="none"/>
+              <circle cx="27" cy="27" r="22" stroke="#f59e0b" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="138.2" stroke-dashoffset="31.8"/>
+            </svg><b>77%</b></div>
+            <div class="ms-label">Discovery</div>
+          </div>
+          <!-- Objection 56 red -->
+          <div class="mini-score">
+            <div class="ring"><svg width="54" height="54" viewBox="0 0 54 54">
+              <circle cx="27" cy="27" r="22" stroke="#eef1f8" stroke-width="6" fill="none"/>
+              <circle cx="27" cy="27" r="22" stroke="#e11d48" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="138.2" stroke-dashoffset="60.8"/>
+            </svg><b>56%</b></div>
+            <div class="ms-label">Objection Handling</div>
+          </div>
+          <!-- Closing 44 red -->
+          <div class="mini-score">
+            <div class="ring"><svg width="54" height="54" viewBox="0 0 54 54">
+              <circle cx="27" cy="27" r="22" stroke="#eef1f8" stroke-width="6" fill="none"/>
+              <circle cx="27" cy="27" r="22" stroke="#e11d48" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="138.2" stroke-dashoffset="77.4"/>
+            </svg><b>44%</b></div>
+            <div class="ms-label">Closing</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card 3: Approaches vs Walkaways line chart -->
+      <section class="card">
+        <div class="card-head"><h3>Approaches vs Walkaways</h3><span class="sub">7-day</span></div>
+        <svg viewBox="0 0 248 110" width="100%" height="110" preserveAspectRatio="none">
+          <!-- gridlines -->
+          <line x1="0" y1="28" x2="248" y2="28" stroke="#eef1f8"/>
+          <line x1="0" y1="56" x2="248" y2="56" stroke="#eef1f8"/>
+          <line x1="0" y1="84" x2="248" y2="84" stroke="#eef1f8"/>
+          <!-- Approaches (blue) -->
+          <polyline fill="none" stroke="#1428A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+            points="6,70 46,52 86,58 126,36 166,42 206,24 242,30"/>
+          <!-- Walkaways (orange) -->
+          <polyline fill="none" stroke="#f97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0"
+            points="6,84 46,78 86,82 126,70 166,76 206,66 242,72"/>
+          <!-- points -->
+          <circle cx="242" cy="30" r="3.5" fill="#1428A0"/>
+          <circle cx="242" cy="72" r="3.5" fill="#f97316"/>
+        </svg>
+        <div class="tl-legend" style="margin-top:8px">
+          <span><i style="background:#1428A0"></i> Approaches</span>
+          <span><i style="background:#f97316"></i> Walkaways</span>
+        </div>
+      </section>
+
+      <!-- Card 4: Loss Reason Index -->
+      <section class="card">
+        <div class="card-head"><h3>Loss Reason Index</h3><span class="sub">today</span></div>
+        <div class="bars">
+          <div class="bar-row"><span class="bl">Price</span><div class="bar-track"><div class="bar-fill red" style="width:88%"></div></div><span class="bv">34%</span></div>
+          <div class="bar-row"><span class="bl">Availability</span><div class="bar-track"><div class="bar-fill amber" style="width:57%"></div></div><span class="bv">22%</span></div>
+          <div class="bar-row"><span class="bl">Competitor</span><div class="bar-track"><div class="bar-fill amber" style="width:49%"></div></div><span class="bv">19%</span></div>
+          <div class="bar-row"><span class="bl">No Interest</span><div class="bar-track"><div class="bar-fill" style="width:31%"></div></div><span class="bv">12%</span></div>
+          <div class="bar-row"><span class="bl">Waiting</span><div class="bar-track"><div class="bar-fill" style="width:21%"></div></div><span class="bv">8%</span></div>
+          <div class="bar-row"><span class="bl">Customer left</span><div class="bar-track"><div class="bar-fill" style="width:13%"></div></div><span class="bv">5%</span></div>
+        </div>
+      </section>
+
+      <!-- Card 5: Competitor Mention Rate -->
+      <section class="card">
+        <div class="card-head"><h3>Competitor Mention Rate</h3><span class="sub">share</span></div>
+        <div class="bars">
+          <div class="bar-row"><span class="bl">Apple</span><div class="bar-track"><div class="bar-fill" style="width:84%;background:#555"></div></div><span class="bv">42%</span></div>
+          <div class="bar-row"><span class="bl">Google</span><div class="bar-track"><div class="bar-fill" style="width:42%;background:#ea4335"></div></div><span class="bv">21%</span></div>
+          <div class="bar-row"><span class="bl">Honor</span><div class="bar-track"><div class="bar-fill" style="width:28%;background:#0ea5a4"></div></div><span class="bv">14%</span></div>
+          <div class="bar-row"><span class="bl">Xiaomi</span><div class="bar-track"><div class="bar-fill orange" style="width:24%"></div></div><span class="bv">12%</span></div>
+          <div class="bar-row"><span class="bl">Huawei</span><div class="bar-track"><div class="bar-fill" style="width:16%;background:#c0392b"></div></div><span class="bv">8%</span></div>
+        </div>
+      </section>
+
+      <!-- Card 6: AI Coaching -->
+      <section class="card dark ai-card">
+        <div class="ai-head">
+          <div class="ai-badge">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3.2"/></svg>
+          </div>
+          <div>
+            <h4>Today's Action Plan</h4>
+            <div class="ai-sub">Generated by Accent AI</div>
+          </div>
+        </div>
+        <p>You lost <b>31% of premium customers</b> after price discussions. Try asking one more <b>discovery question</b> before discussing price.</p>
+        <div class="ai-focus">🎯 Recommended focus: Improve Objection Handling</div>
+        <button class="btn light">View Coaching</button>
+      </section>
+    </aside>
+
+    <!-- ---------- MAIN AREA ---------- -->
+    <main class="main">
+
+      <!-- Filter bar -->
+      <div class="filterbar">
+        <span class="fb-label">Filters</span>
+        <span class="chip-select">Product: All <span class="chev">▾</span></span>
+        <span class="chip-select">Device: All <span class="chev">▾</span></span>
+        <span class="chip-select">Competitor: All <span class="chev">▾</span></span>
+        <span class="chip-select">Conversation: All <span class="chev">▾</span></span>
+        <span class="chip-select">Sentiment: All <span class="chev">▾</span></span>
+        <div class="nav-spacer"></div>
+        <button class="btn ghost sm">⤓ Export</button>
+      </div>
+
+      <!-- TOP ROW: KPI cards -->
+      <div class="grid-6">
+        <div class="kpi">
+          <div class="k-label">Approaches</div>
+          <div class="k-value">129</div>
+          <div class="k-foot"><span class="pill up">▲ 12%</span><small>vs yesterday</small></div>
+        </div>
+        <div class="kpi k-violet">
+          <div class="k-label">Qualified Conversations</div>
+          <div class="k-value">86</div>
+          <div class="k-foot"><span class="pill up">▲ 9%</span><small>67% of approaches</small></div>
+        </div>
+        <div class="kpi">
+          <div class="k-label">Sales Opportunities</div>
+          <div class="k-value">85</div>
+          <div class="k-foot"><span class="pill up">▲ 4%</span><small>open pipeline</small></div>
+        </div>
+        <div class="kpi k-green">
+          <div class="k-label">Conversion Rate</div>
+          <div class="k-value">45%</div>
+          <div class="k-foot"><span class="pill up">▲ 3%</span><small>store avg 38%</small></div>
+        </div>
+        <div class="kpi k-amber">
+          <div class="k-label">Competitor Mentions</div>
+          <div class="k-value">30</div>
+          <div class="k-foot"><span class="pill warn">▲ 5</span><small>23% of convos</small></div>
+        </div>
+        <div class="kpi k-red">
+          <div class="k-label">Avg Conversation Score</div>
+          <div class="k-value">55%</div>
+          <div class="k-foot"><span class="pill down">▼ 2%</span><small>below target</small></div>
+        </div>
+      </div>
+
+      <!-- SECOND ROW: Conversation Funnel -->
+      <section class="card">
+        <div class="card-head"><h3>Conversation Funnel</h3><span class="sub">Stage drop-off · today</span></div>
+        <div class="funnel">
+          <div class="funnel-row"><span class="fl">Approaches</span><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:100%">129</div></div><span class="fpc">100%<small>—</small></span></div>
+          <div class="funnel-row"><span class="fl">Needs Discovery</span><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:80%">86</div></div><span class="fpc">67%<small>−33%</small></span></div>
+          <div class="funnel-row"><span class="fl">Product Demo</span><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:62%">64</div></div><span class="fpc">50%<small>−25%</small></span></div>
+          <div class="funnel-row"><span class="fl">Objection Handling</span><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:48%">52</div></div><span class="fpc">40%<small>−19%</small></span></div>
+          <div class="funnel-row"><span class="fl">Closing</span><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:36%">41</div></div><span class="fpc">32%<small>−21%</small></span></div>
+          <div class="funnel-row"><span class="fl">Purchase</span><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:28%;background:linear-gradient(90deg,#16a34a,#4ade80)">34</div></div><span class="fpc">26%<small>−17%</small></span></div>
+        </div>
+      </section>
+
+      <!-- THIRD ROW: Heatmap + Radar -->
+      <div class="grid-2">
+        <!-- Heatmap -->
+        <section class="card">
+          <div class="card-head"><h3>Conversation Heatmap</h3><span class="sub">busiest times</span></div>
+          <div style="display:grid;grid-template-columns:46px 1fr;gap:8px">
+            <div style="display:flex;flex-direction:column;justify-content:space-around;font-size:10px;color:#9aa1b4;font-weight:600;padding:2px 0">
+              <span>10–12</span><span>12–14</span><span>14–16</span><span>16–18</span><span>18–20</span><span>20–22</span>
+            </div>
+            <div>
+              <div class="heatmap" style="grid-template-columns:repeat(7,1fr)">
+                <!-- 6 rows x 7 days -->
+                <div class="hm-cell" style="background:#d6e0fb"></div><div class="hm-cell" style="background:#9fb4f0"></div><div class="hm-cell" style="background:#5b78e0"></div><div class="hm-cell" style="background:#9fb4f0"></div><div class="hm-cell" style="background:#5b78e0"></div><div class="hm-cell" style="background:#2f4fc4"></div><div class="hm-cell" style="background:#5b78e0"></div>
+                <div class="hm-cell" style="background:#9fb4f0"></div><div class="hm-cell" style="background:#5b78e0"></div><div class="hm-cell" style="background:#2f4fc4"></div><div class="hm-cell" style="background:#2f4fc4"></div><div class="hm-cell" style="background:#1428A0"></div><div class="hm-cell" style="background:#1428A0"></div><div class="hm-cell" style="background:#2f4fc4"></div>
+                <div class="hm-cell" style="background:#5b78e0"></div><div class="hm-cell" style="background:#2f4fc4"></div><div class="hm-cell" style="background:#1428A0"></div><div class="hm-cell" style="background:#1428A0"></div><div class="hm-cell" style="background:#1428A0"></div><div class="hm-cell" style="background:#1428A0"></div><div class="hm-cell" style="background:#1428A0"></div>
+                <div class="hm-cell" style="background:#9fb4f0"></div><div class="hm-cell" style="background:#5b78e0"></div><div class="hm-cell" style="background:#2f4fc4"></div><div class="hm-cell" style="background:#5b78e0"></div><div class="hm-cell" style="background:#2f4fc4"></div><div class="hm-cell" style="background:#1428A0"></div><div class="hm-cell" style="background:#2f4fc4"></div>
+                <div class="hm-cell" style="background:#5b78e0"></div><div class="hm-cell" style="background:#2f4fc4"></div><div class="hm-cell" style="background:#1428A0"></div><div class="hm-cell" style="background:#2f4fc4"></div><div class="hm-cell" style="background:#1428A0"></div><div class="hm-cell" style="background:#1428A0"></div><div class="hm-cell" style="background:#1428A0"></div>
+                <div class="hm-cell" style="background:#d6e0fb"></div><div class="hm-cell" style="background:#9fb4f0"></div><div class="hm-cell" style="background:#5b78e0"></div><div class="hm-cell" style="background:#9fb4f0"></div><div class="hm-cell" style="background:#5b78e0"></div><div class="hm-cell" style="background:#2f4fc4"></div><div class="hm-cell" style="background:#5b78e0"></div>
+              </div>
+              <div class="hm-axis"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+            </div>
+          </div>
+          <div class="hm-legend" style="margin-top:12px;justify-content:flex-end">
+            Fewer <span class="scale"><i style="background:#eef1f8"></i><i style="background:#d6e0fb"></i><i style="background:#9fb4f0"></i><i style="background:#5b78e0"></i><i style="background:#2f4fc4"></i><i style="background:#1428A0"></i></span> More
+          </div>
+        </section>
+
+        <!-- Radar -->
+        <section class="card">
+          <div class="card-head"><h3>Sales Cycle Performance</h3><span class="sub">radar</span></div>
+          <div class="radar-wrap">
+            <svg width="240" height="240" viewBox="0 0 240 240">
+              <!-- grid hexagons -->
+              <polygon points="120,30 197.94,75 197.94,165 120,210 42.06,165 42.06,75" fill="none" stroke="#e7eaf3"/>
+              <polygon points="120,60.6 171.4,90.3 171.4,149.7 120,179.4 68.6,149.7 68.6,90.3" fill="none" stroke="#e7eaf3"/>
+              <polygon points="120,90.3 145.7,105.15 145.7,134.85 120,149.7 94.3,134.85 94.3,105.15" fill="none" stroke="#e7eaf3"/>
+              <!-- axes -->
+              <line x1="120" y1="120" x2="120" y2="30" stroke="#eef1f8"/>
+              <line x1="120" y1="120" x2="197.94" y2="75" stroke="#eef1f8"/>
+              <line x1="120" y1="120" x2="197.94" y2="165" stroke="#eef1f8"/>
+              <line x1="120" y1="120" x2="120" y2="210" stroke="#eef1f8"/>
+              <line x1="120" y1="120" x2="42.06" y2="165" stroke="#eef1f8"/>
+              <line x1="120" y1="120" x2="42.06" y2="75" stroke="#eef1f8"/>
+              <!-- data -->
+              <polygon points="120,39 180,85.35 174.56,151.5 120,178.5 76.35,145.2 85.71,100.2"
+                fill="rgba(20,40,160,.16)" stroke="#1428A0" stroke-width="2.5"/>
+              <circle cx="120" cy="39" r="3.5" fill="#1428A0"/>
+              <circle cx="180" cy="85.35" r="3.5" fill="#1428A0"/>
+              <circle cx="174.56" cy="151.5" r="3.5" fill="#1428A0"/>
+              <circle cx="120" cy="178.5" r="3.5" fill="#1428A0"/>
+              <circle cx="76.35" cy="145.2" r="3.5" fill="#1428A0"/>
+              <circle cx="85.71" cy="100.2" r="3.5" fill="#1428A0"/>
+              <!-- labels -->
+              <text x="120" y="22" text-anchor="middle" font-size="10" fill="#5d6478" font-weight="600">Introduction</text>
+              <text x="205" y="72" text-anchor="start" font-size="10" fill="#5d6478" font-weight="600">Discovery</text>
+              <text x="205" y="172" text-anchor="start" font-size="10" fill="#5d6478" font-weight="600">Needs</text>
+              <text x="120" y="228" text-anchor="middle" font-size="10" fill="#5d6478" font-weight="600">Recommendation</text>
+              <text x="35" y="172" text-anchor="end" font-size="10" fill="#5d6478" font-weight="600">Objection</text>
+              <text x="35" y="72" text-anchor="end" font-size="10" fill="#5d6478" font-weight="600">Closing</text>
+            </svg>
+          </div>
+        </section>
+      </div>
+
+      <!-- FOURTH ROW: Conversation Timeline -->
+      <section class="card">
+        <div class="card-head"><h3>Conversation Quality Timeline</h3><span class="sub">today · each marker = 1 conversation</span></div>
+        <div class="timeline">
+          <div class="tl-track">
+            <div class="tl-base"></div>
+            <div class="tl-markers">
+              <div class="tl-dot g"></div><div class="tl-dot g"></div><div class="tl-dot y"></div><div class="tl-dot g"></div>
+              <div class="tl-dot r"></div><div class="tl-dot y"></div><div class="tl-dot g"></div><div class="tl-dot g"></div>
+              <div class="tl-dot r"></div><div class="tl-dot y"></div><div class="tl-dot g"></div><div class="tl-dot g"></div>
+              <div class="tl-dot y"></div><div class="tl-dot r"></div><div class="tl-dot g"></div><div class="tl-dot g"></div>
+              <div class="tl-dot g"></div><div class="tl-dot y"></div><div class="tl-dot g"></div><div class="tl-dot g"></div>
+            </div>
+          </div>
+          <div class="tl-xaxis"><span>10:00</span><span>12:00</span><span>14:00</span><span>16:00</span><span>18:00</span><span>20:00</span></div>
+          <div class="tl-legend">
+            <span><i style="background:#16a34a"></i> High quality</span>
+            <span><i style="background:#f59e0b"></i> Needs attention</span>
+            <span><i style="background:#e11d48"></i> Poor</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM: AI Recommendations panel -->
+      <section class="card">
+        <div class="card-head"><h3>AI Recommendations</h3><span class="sub">Accent AI · updated 4 min ago</span></div>
+        <div class="reco-grid">
+          <div class="reco-col">
+            <h5><span class="ldot" style="background:#16a34a"></span> Top Strengths</h5>
+            <ul>
+              <li><span class="ic">✓</span> Excellent rapport in introductions (90%)</li>
+              <li><span class="ic">✓</span> Strong product demo engagement</li>
+              <li><span class="ic">✓</span> Above-store conversion (45% vs 38%)</li>
+            </ul>
+          </div>
+          <div class="reco-col">
+            <h5><span class="ldot" style="background:#e11d48"></span> Top Weaknesses</h5>
+            <ul>
+              <li><span class="ic">!</span> Objection handling drops to 56%</li>
+              <li><span class="ic">!</span> Closing rate at 44%, below target</li>
+              <li><span class="ic">!</span> Price raised too early in 31% of convos</li>
+            </ul>
+          </div>
+          <div class="reco-col">
+            <h5><span class="ldot" style="background:#1428A0"></span> Suggested Training</h5>
+            <ul>
+              <li><span class="ic">▸</span> Objection Handling Masterclass</li>
+              <li><span class="ic">▸</span> Value-before-Price framing</li>
+              <li><span class="ic">▸</span> Assumptive Close techniques</li>
+            </ul>
+          </div>
+          <div class="reco-col">
+            <h5><span class="ldot" style="background:#7c3aed"></span> Next Actions</h5>
+            <ul>
+              <li><span class="ic">→</span> Ask 1 more discovery question pre-price</li>
+              <li><span class="ic">→</span> Use trade-in offer on Apple switchers</li>
+              <li><span class="ic">→</span> Review 2 lost premium conversations</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--line)">
+          <h5 style="margin:0 0 8px;font-size:12px;font-weight:700">Recent Customer Feedback</h5>
+          <div class="flex gap-3" style="flex-wrap:wrap">
+            <span class="tag green">“Very knowledgeable” · 5★</span>
+            <span class="tag blue">“Patient and helpful” · 4★</span>
+            <span class="tag amber">“Felt rushed at checkout” · 3★</span>
+            <span class="tag green">“Great trade-in deal” · 5★</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ---------- RIGHT FLOATING PANEL ---------- -->
+    <aside class="rightpanel">
+
+      <!-- Conversation Insights (collapsible) -->
+      <section class="card">
+        <details class="widget" open>
+          <summary>
+            <div class="card-head" style="margin:0;flex:1">
+              <h3>Conversation Insights</h3>
+              <span class="twist">▾</span>
+            </div>
+          </summary>
+          <div style="margin-top:6px">
+            <div class="insight-block">
+              <div class="ib-label">Last Conversation Summary</div>
+              <p>Customer compared <b>Galaxy S24 Ultra</b> against iPhone 15 Pro Max. Interested in camera &amp; battery; hesitated on price. Trade-in mentioned but not closed.</p>
+            </div>
+            <div class="insight-block">
+              <div class="ib-label">Customer Sentiment</div>
+              <div class="sentiment-bar">
+                <i style="background:#16a34a;width:58%"></i>
+                <i style="background:#f59e0b;width:27%"></i>
+                <i style="background:#e11d48;width:15%"></i>
+              </div>
+              <div class="flex between" style="font-size:11px;color:var(--text-muted)"><span>Positive 58%</span><span>Neutral 27%</span><span>Negative 15%</span></div>
+            </div>
+            <div class="insight-block">
+              <div class="ib-label">Emotion Score</div>
+              <div class="kv"><span class="k">Engagement</span><span class="v" style="color:#16a34a">High · 7.8</span></div>
+              <div class="kv"><span class="k">Frustration</span><span class="v" style="color:#f59e0b">Medium · 4.1</span></div>
+            </div>
+            <div class="insight-block">
+              <div class="ib-label">Competitor Mentioned</div>
+              <span class="tag" style="background:#f1f1f1;color:#333">🍎 Apple — iPhone 15 Pro Max</span>
+            </div>
+            <div class="insight-block">
+              <div class="ib-label">Missed Opportunities</div>
+              <p>• No Galaxy Watch cross-sell attempted<br>• Financing options not presented</p>
+            </div>
+            <div class="insight-block">
+              <div class="ib-label">Suggested Wording</div>
+              <p style="font-style:italic;color:#1428A0;background:#f4f6fe;padding:10px;border-radius:8px;border:1px solid #e0e5fa">“With your trade-in, the S24 Ultra is just AED 39/month — and the camera you loved is included. Shall I set that up?”</p>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- M-Tracker -->
+      <section class="card">
+        <div class="card-head"><h3>M-Tracker · Customer Journey</h3><span class="sub">live</span></div>
+        <div class="mtrack">
+          <div class="mt-step is-done"><div class="mt-rail"><div class="mt-node done">✓</div></div><div class="mt-label">Customer entered<small>Store entrance sensor</small></div><span class="mt-time">14:02</span></div>
+          <div class="mt-step is-done"><div class="mt-rail"><div class="mt-node done">✓</div></div><div class="mt-label">Product touched<small>Galaxy S24 Ultra display</small></div><span class="mt-time">14:05</span></div>
+          <div class="mt-step is-done"><div class="mt-rail"><div class="mt-node done">✓</div></div><div class="mt-label">Device tested<small>Camera &amp; S-Pen demo</small></div><span class="mt-time">14:09</span></div>
+          <div class="mt-step is-active"><div class="mt-rail"><div class="mt-node active">●</div></div><div class="mt-label">Demo completed<small>In progress — financing next</small></div><span class="mt-time">14:14</span></div>
+          <div class="mt-step is-pending"><div class="mt-rail"><div class="mt-node pending">○</div></div><div class="mt-label">Checkout reached<small>Not yet reached</small></div><span class="mt-time">—</span></div>
+        </div>
+      </section>
+
+      <!-- Switching Detection -->
+      <section class="card">
+        <div class="card-head"><h3>Switching Detection</h3><span class="sub">this customer</span></div>
+        <div class="ib-label" style="margin-bottom:4px">Customer considered</div>
+        <div class="switch-options">
+          <div class="switch-opt"><span class="logo-chip"><span class="brandmark" style="background:#555">🍎</span> Apple iPhone 15 Pro</span><span class="tag red">High</span></div>
+          <div class="switch-opt"><span class="logo-chip"><span class="brandmark" style="background:#ea4335">G</span> Google Pixel 8 Pro</span><span class="tag amber">Med</span></div>
+          <div class="switch-opt"><span class="logo-chip"><span class="brandmark" style="background:#0ea5a4">H</span> Honor Magic 6</span><span class="tag" style="background:#eef1f8;color:#5d6478">Low</span></div>
+          <div class="switch-opt"><span class="logo-chip"><span class="brandmark" style="background:#f97316">Xi</span> Xiaomi 14 Pro</span><span class="tag" style="background:#eef1f8;color:#5d6478">Low</span></div>
+        </div>
+        <div class="retained">
+          <div><div class="ib-label" style="margin:0">Samsung retained customer</div><div class="big">YES ✓</div></div>
+          <div style="text-align:right;font-size:11px;color:var(--text-muted);max-width:140px">Reason: Trade-in value + ecosystem &amp; S-Pen productivity</div>
+        </div>
+      </section>
+    </aside>
+  </div>
+</body>
+</html>
